@@ -3,9 +3,9 @@ requires = ["hatchling"]
 build-backend = "hatchling.build"
 
 [project]
-name = "ch01-book"
+name = "effective-software-testing-python"
 dynamic = ["version"]
-description = ''
+description = 'python version of the Effective Software Testing by Maurício Aniche'
 readme = "README.md"
 requires-python = ">=3.10"
 license = "MIT"
@@ -24,12 +24,12 @@ classifiers = [
 dependencies = []
 
 [project.urls]
-Documentation = "https://github.com/unknown/ch01-book#readme"
-Issues = "https://github.com/unknown/ch01-book/issues"
-Source = "https://github.com/unknown/ch01-book"
+Documentation = "https://github.com/unknown/effective-software-testing-python#readme"
+Issues = "https://github.com/unknown/effective-software-testing-python/issues"
+Source = "https://github.com/unknown/effective-software-testing-python"
 
 [tool.hatch.version]
-path = "src/ch01_book/__about__.py"
+path = "src/effective_software_testing_python/__about__.py"
 
 [tool.hatch.envs.default]
 dependencies = [
@@ -60,7 +60,7 @@ dependencies = [
   "ruff>=0.0.243",
 ]
 [tool.hatch.envs.lint.scripts]
-typing = "mypy --install-types --non-interactive {args:src/ch01_book tests}"
+typing = "mypy --install-types --non-interactive {args:src/effective_software_testing_python tests}"
 style = [
   "ruff {args:.}",
   "black --check --diff {args:.}",
@@ -76,12 +76,12 @@ all = [
 ]
 
 [tool.black]
-target-version = ["py311"]
+target-version = ["py37"]
 line-length = 120
 skip-string-normalization = true
 
 [tool.ruff]
-target-version = "py311"
+target-version = "py37"
 line-length = 120
 select = [
   "A",
@@ -126,7 +126,7 @@ unfixable = [
 ]
 
 [tool.ruff.isort]
-known-first-party = ["ch01_book"]
+known-first-party = ["effective_software_testing_python"]
 
 [tool.ruff.flake8-tidy-imports]
 ban-relative-imports = "all"
@@ -136,16 +136,16 @@ ban-relative-imports = "all"
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
 [tool.coverage.run]
-source_pkgs = ["ch01_book", "tests"]
+source_pkgs = ["effective_software_testing_python", "tests"]
 branch = true
 parallel = true
 omit = [
-  "src/ch01_book/__about__.py",
+  "src/effective_software_testing_python/__about__.py",
 ]
 
 [tool.coverage.paths]
-ch01_book = ["src/ch01_book", "*/ch01-book/src/ch01_book"]
-tests = ["tests", "*/ch01-book/tests"]
+effective_software_testing_python = ["src/effective_software_testing_python", "*/effective-software-testing-python/src/effective_software_testing_python"]
+tests = ["tests", "*/effective-software-testing-python/tests"]
 
 [tool.coverage.report]
 exclude_lines = [

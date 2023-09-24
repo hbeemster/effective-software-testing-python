@@ -1,8 +1,8 @@
 """Module to test the PlanningPoker class."""
 from random import shuffle
 
-from ch01_book.esitmate import Estimate
-from ch01_book.planning_poker import PlanningPoker
+from src.effective_software_testing_python.ch01.ch01_book.esitmate import Estimate
+from src.effective_software_testing_python.ch01.ch01_book.planning_poker import PlanningPoker
 import pytest
 from hypothesis import given, strategies as st
 
