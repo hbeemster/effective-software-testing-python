@@ -1,7 +1,7 @@
 """Module with the PlanningPoker class."""
 from typing import List
 
-from src.effective_software_testing_python.ch01.ch01_book.esitmate import Estimate
+from src.effective_software_testing_python.ch01.book.estimate import Estimate
 
 
 class PlanningPoker:

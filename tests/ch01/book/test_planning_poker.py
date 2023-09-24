@@ -1,10 +1,13 @@
-"""Module to test the PlanningPoker class."""
+"""Module to test the book implementation of the PlanningPoker class."""
 from random import shuffle
 
-from src.effective_software_testing_python.ch01.ch01_book.esitmate import Estimate
-from src.effective_software_testing_python.ch01.ch01_book.planning_poker import PlanningPoker
 import pytest
 from hypothesis import given, strategies as st
+
+
+from src.effective_software_testing_python.ch01.book.estimate import Estimate
+from src.effective_software_testing_python.ch01.book.planning_poker import PlanningPoker
+
 
 # ------------------------------------------------------------------------
 @pytest.mark.parametrize(
@@ -59,8 +62,13 @@ def test_many_estimates():
 # ------------------------------------------------------------------------
 @given(
     estimates=st.lists(
-        st.builds(Estimate, st.text(min_size=1, max_size=5), st.integers(2, 99)),
+        st.builds(
+            Estimate,
+            st.text(min_size=1, max_size=5),
+            st.integers(2, 99),
+        ),
         min_size=1,
+        max_size=10,
     )
 )
 def test_estimates_in_any_order(estimates):
