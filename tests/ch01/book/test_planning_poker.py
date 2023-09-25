@@ -25,13 +25,12 @@ from src.effective_software_testing_python.ch01.book.planning_poker import Plann
 )
 # ------------------------------------------------------------------------
 def test_inputs(value, expected_message):
-    with pytest.raises(ValueError, match=expected_message) as e:
+    with pytest.raises(ValueError, match=expected_message):
         PlanningPoker.identify_extremes(value)
 
 
 # ------------------------------------------------------------------------
 def test_two_estimates():
-
     devs = PlanningPoker.identify_extremes(
         [
             Estimate("Mauricio", 10),
@@ -46,7 +45,6 @@ def test_two_estimates():
 # this test was later deleted by Eleanor, as the property based testing
 # replaces this one.
 def test_many_estimates():
-
     devs = PlanningPoker.identify_extremes(
         [
             Estimate("Mauricio", 10),

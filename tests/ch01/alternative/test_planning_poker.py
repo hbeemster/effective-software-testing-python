@@ -24,13 +24,12 @@ from src.effective_software_testing_python.ch01.alternative.planning_poker impor
 )
 # ------------------------------------------------------------------------
 def test_inputs(value, expected_message):
-    with pytest.raises(ValueError, match=expected_message) as e:
+    with pytest.raises(ValueError, match=expected_message):
         identify_extremes(value)
 
 
 # ------------------------------------------------------------------------
 def test_two_estimates():
-
     devs = identify_extremes(
         [
             Estimate("Mauricio", 10),
@@ -45,7 +44,6 @@ def test_two_estimates():
 # this test was later deleted by Eleanor, as the property based testing
 # replaces this one.
 def test_many_estimates():
-
     devs = identify_extremes(
         [
             Estimate("Mauricio", 10),
@@ -94,7 +92,7 @@ def test_developers_with_the_same_estimate():
     )
 
     # Different result then the book implementation due to the sorting, it is still correct though.
-    assert {'Arie', 'Andy'} == set(devs)
+    assert {"Arie", "Andy"} == set(devs)
 
 
 # ------------------------------------------------------------------------

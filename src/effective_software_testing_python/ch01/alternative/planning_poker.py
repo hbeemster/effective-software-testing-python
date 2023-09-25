@@ -5,8 +5,6 @@ from src.effective_software_testing_python.ch01.alternative.estimate import Esti
 
 
 def identify_extremes(estimates: List[Estimate]) -> List[str]:
-
-
     if estimates is None:
         raise ValueError("Estimates can't be None")
 
@@ -19,4 +17,3 @@ def identify_extremes(estimates: List[Estimate]) -> List[str]:
         return []
 
     return [sorted_estimates[0].developer, sorted_estimates[-1].developer]
-
