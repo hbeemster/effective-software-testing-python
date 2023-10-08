@@ -39,7 +39,7 @@ dependencies = [
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
-test-cov = "coverage run -m pytest {args:tests}"
+test-cov = "coverage run --branch --source src --omit tests/* -m pytest {args:tests}"
 cov-report = [
   "- coverage combine",
   "coverage report",
@@ -48,6 +48,7 @@ cov = [
   "test-cov",
   "cov-report",
 ]
+cov-erase = "coverage erase"
 
 [[tool.hatch.envs.all.matrix]]
 python = ["3.10", "3.11"]

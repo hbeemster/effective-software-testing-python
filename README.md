@@ -19,6 +19,8 @@ Please go to the [original repository](https://github.com/effective-software-tes
 
 Each folder is an independent [hatch](https://hatch.pypa.io/latest/) project. You should be able to import the project directly in your favorite IDE (e.g. PyCharm, Spyder). You can also run all the tests via hatch test.
 
+I used a [java-to-python-converter](https://www.codeconvert.ai/java-to-python-converter) to speed up the conversion from Java to Python, but made it more Pythonic by hand to keep the linters happy.
+
 To run code coverage in chapter 3, TODO
 
 To run the web tests of chapter 9, TODO
