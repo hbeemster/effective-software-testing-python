@@ -1,6 +1,6 @@
 # Effective Software Testing - Python version
 
-This repository contains the code examples of the [Effective Software Testing: A Developer's Guide](https://www.manning.com/books/effective-software-testing) book, by [Maurício Aniche](https://www.mauricioaniche.com/).
+This repository contains the code examples in python of the [Effective Software Testing: A Developer's Guide](https://www.manning.com/books/effective-software-testing) book, by [Maurício Aniche](https://www.mauricioaniche.com/).
 
 Each folder contains the code examples of their respective chapter:
 
@@ -14,6 +14,8 @@ Each folder contains the code examples of their respective chapter:
     Chapter 8: Test-Driven Development
     Chapter 9: Larger tests
     Chapter 10: Test code quality
+
+Please go to the [original repository](https://github.com/effective-software-testing/code) to checkout the Java version.
 
 Each folder is an independent [hatch](https://hatch.pypa.io/latest/) project. You should be able to import the project directly in your favorite IDE (e.g. PyCharm, Spyder). You can also run all the tests via hatch test.
 
