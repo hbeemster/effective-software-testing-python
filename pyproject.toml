@@ -39,7 +39,7 @@ dependencies = [
 ]
 [tool.hatch.envs.default.scripts]
 test = "pytest {args:tests}"
-test-cov = "coverage run --branch --source src --omit tests/* -m pytest {args:tests}"
+test-cov = "coverage run -m pytest {args:tests}"
 cov-report = [
   "- coverage combine",
   "coverage report",
@@ -137,9 +137,12 @@ ban-relative-imports = "all"
 "tests/**/*" = ["PLR2004", "S101", "TID252"]
 
 [tool.coverage.run]
-source_pkgs = ["effective_software_testing_python", "tests"]
+source_pkgs = ["effective_software_testing_python"]
 branch = true
 parallel = true
+source = [
+  "src/effective_software_testing_python"
+]
 omit = [
   "src/effective_software_testing_python/__about__.py",
 ]
