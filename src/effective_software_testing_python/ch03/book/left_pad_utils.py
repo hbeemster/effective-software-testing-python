@@ -34,4 +34,4 @@ class LeftPadUtils:
             return pad_str[:pads] + str_
         else:
             padding = [pad_str[i % pad_len] for i in range(pads)]
-            return ''.join(padding) + str_
+            return "".join(padding) + str_
